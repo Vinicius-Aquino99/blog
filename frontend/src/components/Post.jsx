@@ -1,3 +1,4 @@
+import { FaEdit, FaTrash } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 const Post = ({ id, title, summary, createdAt, isLogged, onDelete }) => {
@@ -39,22 +40,23 @@ const handleDelete = async () => {
   return (
     <div
       onClick={handleClick}
-      className="hover:bg-stone-200 hover:rounded-2xl px-4 py-4 transition-all cursor-pointer"
+      className="hover:bg-stone-200 hover:rounded-2xl px-4 py-4 transition-all cursor-pointer w-full max-w-2xl"
     >
       <div className="flex flex-col gap-2">
         <div className="flex justify-between items-start">
           <span className="text-lg font-semibold text-stone-600">{title}</span>
 
           {isLogged && (
-            <div className="flex gap-2">
+            <div className="flex gap-2 ">
               <button
+              
                 onClick={(e) => {
                   e.stopPropagation();
                   handleEdit();
                 }}
                 title="Editar"
               >
-                ✏️
+                <FaEdit className="text-stone-600 cursor-pointer hover:text-stone-400 "/>
               </button>
               <button
                 onClick={(e) => {
@@ -63,7 +65,7 @@ const handleDelete = async () => {
                 }}
                 title="Deletar"
               >
-                🗑️
+                <FaTrash className="text-stone-600 cursor-pointer hover:text-stone-400"/>
               </button>
             </div>
           )}

@@ -23,8 +23,8 @@ const PublicPage = () => {
         <div className='bg-stone-100'>
             <Navbar />
             <div className="p-8 flex flex-col gap-8">
+                <div id='posts' className="flex flex-col items-center  gap-4">
                 <h1 className="text-4xl text-stone-600 tracking-widest">VN Blog</h1>
-                <div id='posts' className="flex flex-col gap-4">
                     {posts.map((post) => (
                         <Post 
                             key={post.id}

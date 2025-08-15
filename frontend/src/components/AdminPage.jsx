@@ -36,8 +36,8 @@ const AdminPage = ({ isLogged, setIsLogged }) => {
     <div className="bg-stone-100">
       <Navbar />
       <div className="p-8 flex flex-col">
-        <div className="flex justify-between">
-          <h1 className="text-4xl text-stone-600 tracking-widest">Admin Page</h1>
+        <div className="flex justify-evenly">
+            <h1 className="text-4xl text-stone-600 tracking-widest">Admin Page</h1>
           <div className="flex gap-6">
             <FaPlus className="self-center text-stone-600 text-xl mr-4 cursor-pointer hover:text-stone-400"
             onClick={() => navigate('/create-post')}/>
@@ -45,7 +45,7 @@ const AdminPage = ({ isLogged, setIsLogged }) => {
             onClick={handleLogout}/>
           </div>
         </div>
-        <div id="posts" className="flex flex-col gap-4 mt-8">
+        <div id="posts" className="flex flex-col gap-4 mt-8 items-center">
           {posts.map((post) => (
             <Post
               key={post.id}
