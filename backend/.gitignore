@@ -1,0 +1,6 @@
+node_modules/
+.env
+script.js
+seedAdmin.js
+server.js
+testBcrypt.js
