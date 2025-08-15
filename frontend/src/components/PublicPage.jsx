@@ -20,7 +20,7 @@ const PublicPage = () => {
     }, [])
 
     return (
-        <div>
+        <div className='bg-stone-100'>
             <Navbar />
             <div className="p-8 flex flex-col gap-8">
                 <h1 className="text-4xl text-stone-600 tracking-widest">VN Blog</h1>

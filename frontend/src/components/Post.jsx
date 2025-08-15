@@ -10,17 +10,31 @@ const Post = ({ id, title, summary, createdAt, isLogged, onDelete }) => {
 
   const handleEdit = () => navigate(`/edit/${id}`);
 
-  const handleDelete = async () => {
-    if (window.confirm("Tem certeza que deseja deletar este post?")) {
-      await fetch(`http://localhost:3000/api/posts/${id}`, {
+const handleDelete = async () => {
+  if (window.confirm("Tem certeza que deseja deletar este post?")) {
+    try {
+      const response = await fetch(`http://localhost:3000/api/posts/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || "Erro ao deletar o post");
+      }
+
       onDelete(id);
+      window.alert("Post excluído com sucesso");
+    } catch (error) {
+      console.error("Erro ao deletar post:", error);
+      window.alert("Erro ao excluir o post.");
     }
-  };
+  }
+};
+
 
   return (
     <div

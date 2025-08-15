@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
-input {
+input, textarea {
   border: none;
   outline: none;
   background: none;
   box-shadow: none;
+  @apply text-stone-600; 
 }
