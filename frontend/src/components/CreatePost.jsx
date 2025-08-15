@@ -46,11 +46,11 @@ const CreatePost = () => {
   return (
     <div className="bg-stone-100 h-screen w-screen">
       <Navbar />
-      <div className="flex flex-col justify-start py-10 items-center h-[calc(100%-40px)] ">
+      <div className="flex flex-col justify-start p-10 items-center h-[calc(100%-40px)] ">
         <h1 className="text-4xl text-stone-600 tracking-widest">
           Criar Post{" "}
         </h1>
-        <form className="mt-10 min-w-md flex flex-col" onSubmit={handleSubmit}>
+        <form className="mt-10 flex flex-col min-w-2xs " onSubmit={handleSubmit}>
           <fieldset className="border-1 border-stone-400 rounded-md ">
             <legend className="mx-auto text-stone-600">Título do post</legend>
             <input

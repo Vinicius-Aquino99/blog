@@ -21,13 +21,13 @@ export const listPosts = async (req, res) => {
 };
 
 export const updatePost = async (req, res) => {
-  const { title, content} = req.body;
+  const { title, content, summary, summaryContent} = req.body;
   const { id } = req.params
 
   try {
     const updatedPost = await postsModel.findByIdAndUpdate(
       id,
-      { title, content },
+      { title, content, summary, summaryContent },
       { new: true }
     );
 

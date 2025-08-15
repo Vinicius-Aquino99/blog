@@ -16,9 +16,10 @@ const EditPost = () => {
       try {
         const res = await fetch(`https://blog-hj45.onrender.com/api/posts/${id}`);
         const post = await res.json();
+        console.log(post)
 
         setTitle(post.title);
-        setSummary(post.summary);
+        setSummary(post.summary );
         setSummaryContent(post.summaryContent || "");
         setContent(post.content);
       } catch (error) {
@@ -60,6 +61,15 @@ const EditPost = () => {
       console.error("Erro ao enviar atualização:", error);
       alert("Erro ao atualizar o post.");
     }
+
+    console.log(
+      {
+        title,
+        summary,
+        summaryContent,
+        content
+      }
+    )
   };
 
   return (
@@ -69,7 +79,7 @@ const EditPost = () => {
         <h1 className="text-4xl text-stone-600 tracking-widest">
           Editar Post{" "}
         </h1>
-        <form className="mt-10 min-w-md flex flex-col"
+        <form className="mt-10 flex flex-col min-w-2xs"
         onSubmit={handleSubmit}>
           <fieldset className="border-1 border-stone-400 rounded-md ">
             <legend className="mx-auto text-stone-600">Título do post</legend>
