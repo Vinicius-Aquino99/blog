@@ -10,7 +10,7 @@ const PostContent = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/api/posts/${id}`);
+        const response = await fetch(`https://blog-hj45.onrender.com/api/posts/${id}`);
         const data = await response.json();
 
         setPost(data);

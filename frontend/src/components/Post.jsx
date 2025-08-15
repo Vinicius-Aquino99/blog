@@ -13,7 +13,7 @@ const Post = ({ id, title, summary, createdAt, isLogged, onDelete }) => {
 const handleDelete = async () => {
   if (window.confirm("Tem certeza que deseja deletar este post?")) {
     try {
-      const response = await fetch(`http://localhost:3000/api/posts/${id}`, {
+      const response = await fetch(`https://blog-hj45.onrender.com/api/posts/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,

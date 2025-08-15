@@ -14,7 +14,7 @@ const EditPost = () => {
  useEffect(() => {
     const fetchPost = async () => {
       try {
-        const res = await fetch(`http://localhost:3000/api/posts/${id}`);
+        const res = await fetch(`https://blog-hj45.onrender.com/api/posts/${id}`);
         const post = await res.json();
 
         setTitle(post.title);
@@ -33,7 +33,7 @@ const EditPost = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(`http://localhost:3000/api/posts/${id}`, {
+      const response = await fetch(`https://blog-hj45.onrender.com/api/posts/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

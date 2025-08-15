@@ -21,7 +21,7 @@ const AdminPage = ({ isLogged, setIsLogged }) => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/posts");
+        const response = await fetch("https://blog-hj45.onrender.com/api/posts");
         const data = await response.json();
         setPosts(data);
       } catch (err) {
