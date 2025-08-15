@@ -3,7 +3,7 @@ import LoginPage from "./components/LoginPage";
 import PublicPage from "./components/PublicPage";
 import EditPost from "./components/EditPost"
 import CreatePost from "./components/CreatePost";
-import { BrowserRouter as Router, Routes, Route, Link } from 
+import { HashRouter as Router, Routes, Route, Link } from 
 'react-router-dom';
 import { useState } from "react"
 import PostContent from "./components/PostContent";
@@ -20,7 +20,7 @@ function App() {
 
 
         <Routes>
-          <Route path="/" element={<PublicPage />} />
+          <Route path="/blog" element={<PublicPage />} />
           <Route path="/login" element={<LoginPage setIsLogged={setIsLogged}/>} />
           <Route path={`/post/:id`} element={isLogged && <PostContent />} />
           <Route path='/admin' element={isLogged &&  <AdminPage isLogged={isLogged} setIsLogged={setIsLogged}/>} />
