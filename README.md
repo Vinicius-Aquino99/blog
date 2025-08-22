@@ -1,3 +1,5 @@
+https://vnaquino99.github.io/blog
+
 # VN Blog
 Fiz esse projeto para prática dos meus estudos de criação de API. Um blog simples, que permite o admin criar, editar, excluir e listar posts simples de texto.
 
