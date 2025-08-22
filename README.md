@@ -17,3 +17,5 @@ Feito com Node.js + MongoDB. API com as rotas para:
 
    ### Segurança
    Uso de JWT para autenticação de usuários e bcrypt para hasheamento de senhas.
+
+   OBS.: API está hospedada no pacote FREE do Render, possui delay de request após uso inativo por muito tempo.
